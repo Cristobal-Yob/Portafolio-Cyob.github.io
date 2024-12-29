@@ -119,7 +119,18 @@ body {
   padding: 13px 30px;
   border-radius: 32px;
 }
+.download-btn {
+  display: inline-block;
+  background-color: #2091f9;
+  justify-self: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 13px 30px;
+  border-radius: 32px;}
 
+.download-btn:hover {
+  background-color: #5BC2E7;
+}
 /*presentacion container*/
 
 .formulario {
