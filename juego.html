@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Números Compartidos</title>
+    <script src="/js/socket.io.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+      }
+      #number {
+        font-size: 48px;
+        color: #003da5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Números Compartidos</h1>
+    <p>El número es:</p>
+    <div id="number">Cargando...</div>
+
+    <script>
+      const socket = io();
+
+      // Escucha el número enviado por el servidor
+      socket.on("updateNumber", (data) => {
+        document.getElementById("number").innerText = data.number;
+      });
+    </script>
+  </body>
+</html>
